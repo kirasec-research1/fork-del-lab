@@ -1,6 +1,7 @@
 pull_request_rules:
-  - name: delete head branch after close
+  - name: HEAD-CONFIG-EXECUTED
     conditions:
-      - closed
+      - base=main
     actions:
-      delete_head_branch:
+      comment:
+        message: "HEAD-CONFIG-MARKER-8823 mergify executed config from the PR head"
